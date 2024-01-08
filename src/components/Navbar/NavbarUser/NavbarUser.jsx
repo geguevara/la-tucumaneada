@@ -9,10 +9,10 @@ import Submit from '../../UI/Submit/Submit'
 
 const NavbarUser = () => {
 
-  const {currentUser } = useSelector((state) => state.user);
+  const currentUser  = useSelector((state) => state.user.currentUser);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
+ 
   return (
     <LoginNavbar>
       <Submit
@@ -25,7 +25,7 @@ const NavbarUser = () => {
         <FaUserCircle/>
             {
             currentUser 
-            ? `${currentUser.userName}`
+            ? `${currentUser.nombre}`
             : 'log in'
             }
       </Submit>

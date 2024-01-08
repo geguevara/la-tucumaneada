@@ -10,7 +10,8 @@ import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute"
 import Checkout from '../pages/Checkout/Checkout'
 import Register from '../pages/Register/Register'
 import Felicitaciones from '../pages/Felicitaciones/Felicitaciones'
-
+import Issue from '../pages/Issue/Issue'
+import Validate from '../pages/Validate/Validate'
 const Routes = () => {
   return (
     <BrowserRouter>
@@ -24,7 +25,8 @@ const Routes = () => {
             <Route path="/register" element={<Register/>} />
             <Route path="/felicitaciones" element={<Felicitaciones/>} />
             <Route path="/checkout" element={<Checkout/> } />
-
+            <Route path='/issue' element={<Issue/>} />
+            <Route path='/validate' element={<Validate/>} />
             <Route path='*' element={<h2>Error!</h2>} />
         </RoutesDom>
       </Layout>  

@@ -21,9 +21,14 @@ const userSlice = createSlice({
                 hiddenMenu: !state.hiddenMenu,
             };
         },
+        setVerified: state => {
+            if (state.currentUser) {
+              state.currentUser.verified = true;
+            }
+        },
     },
 });
 
-export const { setCurrentUser, toggleHiddenMenu } = userSlice.actions;
+export const { setCurrentUser, toggleHiddenMenu, setVerified } = userSlice.actions;
 
 export default userSlice.reducer;

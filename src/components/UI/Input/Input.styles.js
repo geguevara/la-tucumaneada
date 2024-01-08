@@ -19,7 +19,7 @@ export const InputLabelStyled = styled.label`
 export const InputStyled = styled.input`
   background-color: var(--green);
   outline: none;
-  border: ${({ isError }) => (isError ? '1px solid #fb103d ' : 'none')};
+  border: ${({ isError }) => (isError ? '1px solid #fb12ad ' : 'none')};
   border-radius: 8px;
   height: 30px;
   padding: 0.5rem 1rem;

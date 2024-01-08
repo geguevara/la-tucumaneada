@@ -15,4 +15,8 @@ export const BtnSubmit = styled(motion.button)`
   display: flex;
   align-items: center;
   gap: 10px;
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
 `;

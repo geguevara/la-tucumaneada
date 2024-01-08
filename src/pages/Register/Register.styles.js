@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { Form as FormikForm } from 'formik';
+
 
 export const RegisterContainerStyled = styled.section`
   margin: 50px;
@@ -16,7 +18,7 @@ export const RegisterContainerStyled = styled.section`
     }
 `;
 
-export const FormRegister = styled.form`
+export const FormRegister = styled(FormikForm)`
  display: flex;
     flex-direction: column;
     width: 30rem;
@@ -39,42 +41,16 @@ export const FormRegister = styled.form`
 `
 
 
-export const LoginStyled = styled.p`
-    color: var(--green);
-    text-align: center;
-    width: 100%;
-    :hover {
-      text-decoration: underline;
-      transition: all 0.25s ease-out;
+export const LoginStyled = styled(Link)`
+  &p{
+     color: var(--green);
+      text-align: center;
+      width: 100%;
+      
+      :hover {
+        text-decoration: underline;
+        transition: all 0.25s ease-out;
     }
-`;
-export const InputContainerStyled = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-export const RegisterInputStyled = styled.input`
-  width: 100%;
-  color: gray;
-  background-color: white;
-  border-radius: 15px;
-  border: ${({ isError }) => (isError ? 'none' :'1px solid gray' )};
-  outline: none;
-  caret-color: gray;
-  border-radius: 10px;
-  padding: 5px;
-  -webkit-text-fill-color: gray;
-  :-webkit-autofill, :-webkit-autofill:hover, :-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0px 1000px var(--green) inset;
   }
-`;
-
-export const ErrorMessageStyled = styled.span`
-  padding: 8px;
-  margin-top: 7px;
-  color: white;
-  font-size: 14px;
-  background-color: #6c2d2d;
-  width: fit-content;
-  border-radius: 7px;
+   
 `;

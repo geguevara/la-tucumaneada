@@ -19,11 +19,10 @@ const CheckoutForm = ({cartItems}) => {
         <Formik
             initialValues={checkoutInitialValues}
             validationSchema={checkoutValidationSchema} 
-            onSubmit={ () => {
-                  navigate("/felicitaciones")
-                  dispatch(clearCart())
+             onSubmit={ () => {
+                dispatch(clearCart()) 
               }
-            }
+            } 
         >
             {
                 ({isSubmitting})=>(
@@ -60,7 +59,15 @@ const CheckoutForm = ({cartItems}) => {
                         placeholder= 'escriba su localidad'
                     >Localidad
                     </Input>
-                    <Submit disabled={!cartItems.length || isSubmitting}>
+                    <Submit 
+                    disabled={!cartItems.length || isSubmitting}
+                    onClick={()=>{
+                        navigate("/felicitaciones")
+                       
+
+                    }
+                }
+                    >
                         {isSubmitting 
                             ? <RotatingLines
                             strokeColor="green"
