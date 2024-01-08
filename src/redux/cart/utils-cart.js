@@ -10,8 +10,10 @@ export const addItemToCart= (cartItems, product) =>{
             }
             : item
         })
+    }else{
+         return[ ...cartItems,{ ...product, quantity: 1 }]
     }
-    return[ ...cartItems,{ ...product, quantity: 1 }]
+   
 }
 
 

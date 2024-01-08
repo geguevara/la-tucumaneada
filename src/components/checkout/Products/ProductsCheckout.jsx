@@ -10,7 +10,8 @@ import {
   ProductsTitleStyled,
   SubtotalStyled,
   TotalStyled
-} from "./ProductsCheckout.styles"
+} from "./ProductsCheckout.styles";
+
 
 const ProductsCheckout = ({cartItems, shippingCost, price}) => {
   return (
@@ -24,23 +25,23 @@ const ProductsCheckout = ({cartItems, shippingCost, price}) => {
               return <ProductCheckoutCard key={item.id} {...item} />
             })
           ) : (
-            <p>Aun no ha hecho ningun pedido.</p>
+            <p>Aun no ha hecho ningún pedido.</p>
           )
         }
       </CardsWrapperStyled>
       <PriceContainerStyled>
         <SubtotalStyled>
           <p>Subtotal</p>
-          <span>${price}</span>
+          <span>$ {price}</span>
         </SubtotalStyled>
         <EnvioStyled>
           <p>Envío:</p>
-          <span>${shippingCost}</span>
+          <span>$ {shippingCost}</span>
         </EnvioStyled>
         <HrStyled />
         <TotalStyled>
           <p>Total:</p>
-          <PriceTotalStyled>${price + shippingCost}</PriceTotalStyled>
+          <PriceTotalStyled>$ {price + shippingCost}</PriceTotalStyled>
         </TotalStyled>
       </PriceContainerStyled>
     </ProductosContainerStyled>

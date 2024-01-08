@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import Submit from '../../components/UI/Submit/Submit';
 import { ContainerInfo, Text, Title } from './Felicitaciones.styles';
+import Button from '../../components/UI/Button/Button';
+import Submit from '../../components/UI/Submit/Submit';
 
 const Felicitaciones = () => {
   const navigate = useNavigate();

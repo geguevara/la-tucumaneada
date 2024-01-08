@@ -7,6 +7,7 @@ import Increment from '../UI/Increment/Increment';
 import { useDispatch } from 'react-redux';
 import { addToCart, removeToCart } from '../../redux/cart/cartSlice';
 
+
 import {
     CardContainerStyled, CardInfoStyled, PriceStyled, ProductTitleStyled, TextStyled, QuantityContainerStyled,
   } from './ProductCheckout.styles';

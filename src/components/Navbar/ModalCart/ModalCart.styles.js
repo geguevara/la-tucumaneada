@@ -17,9 +17,7 @@ export const ContainerStyled = styled(motion.div)`
   background-color: #84a59d;
   box-shadow: 0 0 30px 20px rgba(0, 0, 0, 0.3);
   @media (max-width: 500px){
-    width: 100%;
-    left: -7px;
-  }
+    width: 100%;  }
 `;
 
 export const CloseBtnContainer = styled.div`
@@ -102,6 +100,12 @@ export const ProductContainerStyled = styled.div`
     left: 0;
     top: 0;
     right: 0%;
+  }
+  @media (max-width:360px) {
+    padding-left: 0;
+    img{
+      display: none;
+    }
   }
 `;
 

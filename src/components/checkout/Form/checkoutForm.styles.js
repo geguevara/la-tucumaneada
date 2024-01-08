@@ -25,5 +25,6 @@ export const Form = styled(FormikForm)`
       color: #a98467 ;
       border: 1px solid #a98467;
       margin: 10px;
+      justify-content: center;
     }
 `;

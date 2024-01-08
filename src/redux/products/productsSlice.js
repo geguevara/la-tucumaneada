@@ -12,15 +12,9 @@ export const productsSlice = createSlice({
     name: 'products',
     initialState: INITIAL_STATE,
     reducers: {
-        selectProduct: (state, action) =>{
-            return{
-                ...state,
-                selectedProd:action.payload !== state.selectedProd
-                ? action.payload :null
-            }
-        },
+        
         getProducts: state => state
     }
 })
-export const {getProducts, selectProduct} =productsSlice.actions;
+export const {getProducts} =productsSlice.actions;
 export default productsSlice.reducer;

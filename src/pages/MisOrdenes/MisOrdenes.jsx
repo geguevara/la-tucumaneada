@@ -1,0 +1,47 @@
+import { useNavigate } from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux"
+import Button from "../../components/UI/Button/Button";
+import { CardsMisOrdenes } from "../../components/MisOrdenes/CardsMisOrdenes";
+import {
+  MisOrdenesBtnContainerStyled,
+  MisOrdenesContainerStyled,
+  MisOrdenesPatternStyled,
+  MisOrdenesTitleStyled,
+} from "./MisOrdenes.styles";
+import { useEffect } from "react";
+import { getOrders } from "../../axios/axios-orders";
+import { clearError, fetchOrdersFail } from "../../redux/orders/ordersSlice";
+
+const MisOrdenes = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const currentUser = useSelector(state => state.user.currentUser)
+  const {orders, error} = useSelector(state => state.orders)
+  useEffect(() => {
+    if (!orders) {
+      getOrders(dispatch, currentUser)
+    }
+
+    if(!currentUser?.token) {
+      dispatch(fetchOrdersFail())
+    } else {
+      error && dispatch(clearError())
+    }
+
+  }, [currentUser, dispatch, error, orders])
+
+  return (
+    <>
+      <MisOrdenesContainerStyled>
+        <MisOrdenesTitleStyled>Mis órdenes</MisOrdenesTitleStyled>
+        <CardsMisOrdenes />
+        <MisOrdenesBtnContainerStyled>
+          <Button onClick={() => navigate("/")}>Volver a comprar</Button>
+        </MisOrdenesBtnContainerStyled>
+      </MisOrdenesContainerStyled>
+      
+    </>
+  );
+};
+
+export default MisOrdenes;

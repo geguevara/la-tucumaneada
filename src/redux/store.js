@@ -7,6 +7,7 @@ import productsReducer from "./products/productsSlice";
 import recomendadosReducer from "./recomendados/recomendadosSlice";
 import cartReducer from "./cart/cartSlice";
 import userReducer from "./user/userSlice";
+import ordersReducer from "./orders/ordersSlice";
 
 const reducers = combineReducers({
   categories: categoriesReducer,
@@ -14,6 +15,7 @@ const reducers = combineReducers({
   recommended: recomendadosReducer,
   cart: cartReducer,
   user: userReducer,
+  orders: ordersReducer
 });
 const persistConfig = {
   key: "root",

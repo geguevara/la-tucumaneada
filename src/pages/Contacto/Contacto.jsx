@@ -11,7 +11,7 @@ const Contacto = () => {
             <input type='text' placeholder='Apellido' id='lastname' /* value={form.lastname *//>
             <input type='text' placeholder='Email' id='email' /* value={form.email} *//>
             <input type='text' placeholder='Asunto' id='asunto' /* value={Form.asunto} *//>
-            <Button>Enviar</Button>
+            <Button >Enviar</Button>
         </FormStyled>
     </SectionForm>
   )

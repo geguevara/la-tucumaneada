@@ -1,6 +1,5 @@
 import React from 'react'
 import { BuyProdContainer, CardTextContainer, ContainerImg, PriceProdStyled, ProductCard } from './CardProductsStyles'
-/* import { typeOfMoney } from '../../utils/TypeOfMoney' */
 import Button from '../UI/Button/Button'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../../redux/cart/cartSlice'

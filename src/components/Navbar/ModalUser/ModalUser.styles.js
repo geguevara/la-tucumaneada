@@ -11,6 +11,10 @@ export const ModalContainer = styled(motion.div)`
   z-index: 98;
   border-radius: 1rem 0 0 1rem;
   padding: 2rem;
+  background-color: #d9d4d4fa;
+  gap: 15px;
+  flex-direction: column;
+  display: flex;
   
   & span {
     display: flex;

@@ -65,17 +65,13 @@ align-items: center;
         height: 100vh;
         width: 450px;
         gap: 60px;
-        z-index: 10;
+        z-index: 10; }
        /*  &.open{
             transform: none;
         } */
-        @media (max-width: 600px){
-            width: 50%;
-        } 
-        @media (max-width: 500px){
-            width: 100%;
-        } 
-    }
+       
+       
+   
 `
 export const LinksContainerStyled= styled.div`
     display: flex;
@@ -99,10 +95,10 @@ export const LinksContainerStyled= styled.div`
         }
         /* @media (max-width: 600px){
             width: 50%;
-        } 
+        } */
         @media (max-width: 500px){
             width: 100%;
-        }  */
+        }  
     }
 `;
 
@@ -132,6 +128,7 @@ export const MenuNavbarStyled= styled.div`
         display: flex;   
         z-index: 1;
     }
+    
 `
 
 export const CarritoNavbar= styled.div`
@@ -170,4 +167,7 @@ export const ModalOverlayStyled = styled(motion.div)`
       backdrop-filter: blur(4px);
     `}
  
+    @media (max-width: 500px){
+         display: none
+        } 
 `;
