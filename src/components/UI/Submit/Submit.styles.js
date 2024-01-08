@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const BtnSubmit = styled(motion.button)`
   padding: 0.8rem 1.5rem;
@@ -7,9 +7,11 @@ export const BtnSubmit = styled(motion.button)`
   border: 1px solid white;
   border-radius: 15px;
   color: white;
-  background-color: transparent;
+  background-color: var(--green);
   text-transform: uppercase;
   font-weight: 400;
+  display: flex;
+  justify-content: center;
   cursor: pointer;
   margin-bottom: 15px;
   display: flex;
